@@ -5,10 +5,10 @@ function isAnagram(s: string, t: string): boolean {
   const hashT = new Map<string, number>();
 
   for (let i = 0; i < s.length; i++) {
-    const countS = hashS.get(s[i]) || 0;
+    const countS = hashS.get(s[i])?? 0;
     hashS.set(s[i], countS + 1);
 
-    const countT = hashT.get(t[i]) || 0;
+    const countT = hashT.get(t[i])?? 0;
     hashT.set(t[i], countT + 1);
   }
 
